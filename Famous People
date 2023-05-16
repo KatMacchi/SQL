@@ -12,6 +12,7 @@ INSERT INTO academy_awards (id, title, category, year_of_oscar_win, actor_who_wo
 
 SELECT fullname as Full_Name, oscar_wins as 
    Oscar_Wins, title as Movie_Title
+   FROM movies
    LEFT OUTER JOIN movies
-   ON actor.id=cast_member_id
+   ON actors.id=cast_member_id
    WHERE fullname LIKE "Jennifer%" AND release_year < 2010;
